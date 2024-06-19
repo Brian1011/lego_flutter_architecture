@@ -1,7 +1,3 @@
-library products;
-
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/controllers/products_controller.dart';
+export 'src/models/product.dart';
+export 'src/views/products_list.dart';

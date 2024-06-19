@@ -3,30 +3,59 @@ import 'package:provider/provider.dart';
 
 import '../controllers/auth_controller.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  final NavigatorObserver navigatorObserver;
+
+  const LoginPage({Key? key, required this.navigatorObserver})
+      : super(key: key);
+
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    context.read<AuthController>().addListener(_handleAuthChange);
+  }
+
+  @override
+  void dispose() {
+    context.read<AuthController>().removeListener(_handleAuthChange);
+    super.dispose();
+  }
+
+  void _handleAuthChange() {
+    final authController = context.read<AuthController>();
+    if (authController.user != null) {
+      widget.navigatorObserver.navigator?.pushNamed('/products');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final emailController = TextEditingController();
-    final passwordController = TextEditingController();
-
     return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
+      appBar: AppBar(title: Text('Login')),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
               controller: emailController,
-              decoration: const InputDecoration(labelText: 'Email'),
+              decoration: InputDecoration(labelText: 'Email'),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             TextField(
               controller: passwordController,
-              decoration: const InputDecoration(labelText: 'Password'),
+              decoration: InputDecoration(labelText: 'Password'),
               obscureText: true,
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
                 final authController = context.read<AuthController>();
@@ -35,7 +64,7 @@ class LoginPage extends StatelessWidget {
                   passwordController.text,
                 );
               },
-              child: const Text('Login'),
+              child: Text('Login'),
             ),
           ],
         ),

@@ -6,7 +6,7 @@ class AuthService {
   Future<User> login(String email, String password) async {
     // Simulate API call
     await Future.delayed(const Duration(seconds: 2));
-    return User(id: '1', email: email);
+    return User(id: '1', email: 'test@gmail.com');
   }
 
   Future<void> logout() async {

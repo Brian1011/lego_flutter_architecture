@@ -1,5 +1,4 @@
 # Ecommerce Project
-
 This is an e-commerce project built with Flutter, utilizing a modular architecture with separate packages for authentication, products, and cart/checkout functionality. The project follows the MVC pattern with providers for state management, and uses Flutter Flow for navigation within packages and Go Router for overall app navigation. It also includes fake API calls with services.
 
 ## Project Structure
