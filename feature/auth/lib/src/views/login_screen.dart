@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../controllers/auth_controller.dart';
 
 class LoginPage extends StatefulWidget {
-  final NavigatorObserver navigatorObserver;
 
-  const LoginPage({Key? key, required this.navigatorObserver})
+  const LoginPage({Key? key})
       : super(key: key);
 
   @override
@@ -25,37 +25,37 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void dispose() {
-    context.read<AuthController>().removeListener(_handleAuthChange);
+    //context.read<AuthController>().removeListener(_handleAuthChange);
     super.dispose();
   }
 
   void _handleAuthChange() {
     final authController = context.read<AuthController>();
     if (authController.user != null) {
-      widget.navigatorObserver.navigator?.pushNamed('/products');
+      context.go('/products');
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Login')),
+      appBar: AppBar(title: const Text('Login')),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
               controller: emailController,
-              decoration: InputDecoration(labelText: 'Email'),
+              decoration: const InputDecoration(labelText: 'Email'),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             TextField(
               controller: passwordController,
-              decoration: InputDecoration(labelText: 'Password'),
+              decoration: const InputDecoration(labelText: 'Password'),
               obscureText: true,
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
                 final authController = context.read<AuthController>();
@@ -64,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                   passwordController.text,
                 );
               },
-              child: Text('Login'),
+              child: const Text('Login'),
             ),
           ],
         ),
