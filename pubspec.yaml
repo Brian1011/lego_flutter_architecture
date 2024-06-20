@@ -1,0 +1,7 @@
+name: ecommerce_project
+
+environment:
+    sdk: ">=2.7.0 <3.0.0"
+
+dev_dependencies:
+    melos: ^3.4.0
