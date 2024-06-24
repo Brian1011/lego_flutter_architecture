@@ -1,7 +1,7 @@
 name: ecommerce_project
 
 packages:
-  - app/**
+  - app/
   - feature/** # This will include all packages in the feature directory
 
 command:
