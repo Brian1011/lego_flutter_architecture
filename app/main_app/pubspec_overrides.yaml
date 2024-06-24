@@ -1,0 +1,8 @@
+# melos_managed_dependency_overrides: auth,cart_checkout,products
+dependency_overrides:
+  auth:
+    path: ../../feature/auth
+  cart_checkout:
+    path: ../../feature/cart_checkout
+  products:
+    path: ../../feature/products
