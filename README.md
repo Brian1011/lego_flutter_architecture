@@ -74,6 +74,6 @@ To work on a specific feature package:
 Set up CI to run `flutter pub get` and any necessary code generation for each package before building the main app.
 
 ## Melos with fvm
-melos clean --sdk-path .fvm/flutter_sdk
-melos bootstrap --sdk-path .fvm/flutter_sdk
-melos pub-run:all --sdk-path .fvm/flutter_sdk
+`melos clean --sdk-path .fvm/flutter_sdk`
+`melos bootstrap --sdk-path .fvm/flutter_sdk`
+`melos pub-run:all --sdk-path .fvm/flutter_sdk`
