@@ -33,6 +33,7 @@ dev_dependencies:
     flutter_lints: ^4.0.0
     build_runner: ^2.4.11
     freezed: ^2.5.3
+    bdd_widget_test: ^1.7.4
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
