@@ -4,7 +4,7 @@ The project follows the MVC pattern with providers for state management, and use
 It also includes fake API calls with services. <br /><br />
 
 This project has been set up using Melos, a Dart package manager that allows for managing multiple packages within a single repository. <br />
-It has been inspired by the [Flutter Modular Architecture aka Lego Style](https://www.youtube.com/watch?v=Ap-cRFRScQw&t=2s) by [Anna](https://github.com/foxanna) and [Oleksandr Leushchenko](https://github.com/foxanna/flutter_theme_workshop). <br /><br />
+It has been inspired by the [Flutter Modular Architecture aka Lego Style](https://www.youtube.com/watch?v=Ap-cRFRScQw&t=2s) by [Anna](https://github.com/foxanna) and [Oleksandr Leushchenko](https://github.com/olexale). <br /><br />
 
 The idea is to have a single repository with multiple packages, each containing a feature or a module of the app. <br />
 This allows for better separation of concerns, easier code maintenance, and faster development. <br /><br />
