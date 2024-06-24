@@ -1,7 +1,13 @@
 # Ecommerce Project
 This is an e-commerce project built with Flutter, utilizing a modular architecture with separate packages for authentication, products, and cart/checkout functionality. <br />
 The project follows the MVC pattern with providers for state management, and uses Flutter Flow for navigation within packages and Go Router for overall app navigation. 
-It also includes fake API calls with services.
+It also includes fake API calls with services. <br /><br />
+
+This project has been set up using Melos, a Dart package manager that allows for managing multiple packages within a single repository. <br />
+It has been inspired by the [Flutter Modular Architecture aka Lego Style](https://www.youtube.com/watch?v=Ap-cRFRScQw&t=2s) by Anna and Oleksandr Leushchenko. <br /><br />
+
+The idea is to have a single repository with multiple packages, each containing a feature or a module of the app. <br />
+This allows for better separation of concerns, easier code maintenance, and faster development. <br /><br />
 
 ## Project Structure
 
