@@ -1,15 +1,17 @@
 # Ecommerce Project
-This is an e-commerce project built with Flutter, utilizing a modular architecture with separate packages for authentication, products, and cart/checkout functionality. The project follows the MVC pattern with providers for state management, and uses Flutter Flow for navigation within packages and Go Router for overall app navigation. It also includes fake API calls with services.
+This is an e-commerce project built with Flutter, utilizing a modular architecture with separate packages for authentication, products, and cart/checkout functionality. <br />
+The project follows the MVC pattern with providers for state management, and uses Flutter Flow for navigation within packages and Go Router for overall app navigation. 
+It also includes fake API calls with services.
 
 ## Project Structure
 
-├── app/
-│   └── main_app/
-├── core/
-├── feature/
-│   ├── auth/
-│   ├── products/
-│   └── cart_checkout/
+├── app/ <br />
+│   └── main_app/ <br />
+├── core/ <br />
+├── feature/ <br />
+│   ├── auth/ <br />
+│   ├── products/ <br />
+│   └── cart_checkout/ <br />
 
 - `app/main_app`: The main Flutter application that ties everything together.
 - `core`: Shared modules and utilities (if any).
@@ -74,6 +76,6 @@ Melos will ensure all features have the same package version. [Read more about i
 
 Here are some useful commands when using melos with fvm.
 
-`melos clean --sdk-path .fvm/flutter_sdk`
-`melos bootstrap --sdk-path .fvm/flutter_sdk`
-`melos pub-run:all --sdk-path .fvm/flutter_sdk`
+`melos clean --sdk-path .fvm/flutter_sdk` <br />
+`melos bootstrap --sdk-path .fvm/flutter_sdk` <br />
+`melos pub-run:all --sdk-path .fvm/flutter_sdk` <br />
